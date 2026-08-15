@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# todo - dead simple todo list
+FILE="$HOME/.todos"
+case "$1" in
+  add) echo "$2" >> "$FILE" ;;
+  list) cat "$FILE" ;;
+  *) echo "usage: todo add <task> | todo list" ;;
+esac
